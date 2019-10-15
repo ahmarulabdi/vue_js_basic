@@ -9,6 +9,14 @@
 <body>
 	<div id="vue-app">
 		<h1>{{ pesan('malam') }}</h1>
+		<p>
+			<a v-bind:href="alamatWeb">Koding IT</a>
+		</p>
+		<p v-html=alamatWebTag ></p>
+		<p>
+			<label>Tes Input</label>
+			<input type="text" name="tes_input" v-bind:value="tes_input">
+		</p>
 		<p>Nama : {{ nama }}</p>
 		<p>Pekerjaan : {{ pekerjaan }}</p>
 	</div>
