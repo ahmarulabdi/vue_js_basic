@@ -1,6 +1,6 @@
  new Vue({
  	el : '#vue-app' ,
  	data : {
- 		name : "abdi"
+ 		nama : "abdi"
  	}
  })
