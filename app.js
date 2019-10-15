@@ -6,7 +6,7 @@
  	},
  	methods : {
  		pesan : function(waktu) {
- 			return "Selamat "+waktu + " "+this.nama
+ 			return 'Selamat '+waktu + ' ' +this.nama;
  		}
  	}
  })
