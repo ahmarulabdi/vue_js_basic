@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Section 3 - data dan method</title>
+	<title>Section 5 - Event</title>
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript" src="https://kodingit.com/vue.js"></script>
 </head>
 <body>
 	<div id="vue-app">
-		<h1>{{ pesan('malam') }}</h1>
+		<h1>Events</h1>
+		<!-- bisa menggunakan v-on atau @ -->
+		<button @click="tambah(1)">Tambah 1 Tahun</button>
+		<button v-on:click="kurang(1)">Kurang 1 Tahun</button>
+		<button @dblclick="tambah(10)">Tambah 10 Tahun</button>
+		<button v-on:dblclick="kurang(10)">Kurang 10 Tahun</button>
 		<p>
-			<a v-bind:href="alamatWeb">Koding IT</a>
+			Umur saya adalah : {{ umur }}
 		</p>
-		<p v-html=alamatWebTag ></p>
-		<p>
-			<label>Tes Input</label>
-			<input type="text" name="tes_input" v-bind:value="tes_input">
-		</p>
-		<p>Nama : {{ nama }}</p>
-		<p>Pekerjaan : {{ pekerjaan }}</p>
+		<div id="canvas" v-on:mousemove="updateXY">
+			{{ x }}, {{ y }}
+		</div>
 	</div>
 	<script type="text/javascript" src="app.js"></script>
 </body>

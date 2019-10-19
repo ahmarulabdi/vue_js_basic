@@ -1,15 +1,21 @@
  new Vue({
  	el : '#vue-app' ,
  	data : {
- 		nama : "abdi",
- 		pekerjaan : 'rebahan',
- 		alamatWeb : 'https://kodingit.com',
- 		alamatWebTag : "<a href='https://kodingit.com'>Koding IT</a>",
- 		tes_input : "Standar"
+ 		umur : 22,
+ 		x : 0,
+ 		y : 0
  	},
+
  	methods : {
- 		pesan : function(waktu) {
- 			return 'Selamat '+waktu + ' ' +this.nama;
+ 		tambah : function(param) {
+ 			this.umur+= param;
+ 		},
+ 		kurang : function(param) {
+ 			this.umur-= param;
+ 		},
+ 		updateXY : function(event) {
+ 			this.x = event.offsetX;
+ 			this.y = event.offsetY;
  		}
  	}
  })
