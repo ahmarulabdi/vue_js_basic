@@ -1,28 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Section 6 - Event Modifier</title>
+	<title>Section 7 - Keyboard Event</title>
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript" src="https://kodingit.com/vue.js"></script>
 </head>
 <body>
 	<div id="vue-app">
-		<h1>Events</h1>
-		<!-- bisa menggunakan v-on atau @ -->
-		<button @click="tambah(1)">Tambah 1 Tahun</button>
-		<!-- event modifier .once mengakibatkan event v-on:click hanya bisa digunakan 1 kali saja -->
-		<button v-on:click.once="kurang(1)">Kurang 1 Tahun</button>
-		<button @dblclick="tambah(10)">Tambah 10 Tahun</button>
-		<button v-on:dblclick="kurang(10)">Kurang 10 Tahun</button>
-		<p>
-			Umur saya adalah : {{ umur }}
-		</p>
-		<div id="canvas" v-on:mousemove="updateXY">
-			{{ x }}, {{ y }}
-		</div>
-		<!-- event modifier .prevent pada v-on:click memberhentikan alur normal yang mengarah ke link di href, ketika tag <a> di click -->
-		<a v-on:click.prevent="click"  href="http://www.kodingit.com">Koding IT</a>
+		<h1>Keyboard Event</h1>
+		<!-- menggunakan keyboard event dan keyboard event modifiernya -->
+		<label>Nama : </label>
+		<!-- event ketika menekan enter pada keyboard -->
+		<input type="text" name="" @keyup.enter="logNama">
+		<label>Umur : </label>
+		<!-- event ketika menekan alt + enter pada keyboard -->
+		<input type="text" name="" @keyup.alt.enter="logUmur">
 	</div>
 	<script type="text/javascript" src="app.js"></script>
 </body>

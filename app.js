@@ -7,18 +7,11 @@
  	},
 
  	methods : {
- 		tambah : function(param) {
- 			this.umur+= param;
+ 		logNama :function() {
+ 			console.log("kamu input nama kamu");
  		},
- 		kurang : function(param) {
- 			this.umur-= param;
- 		},
- 		updateXY : function(event) {
- 			this.x = event.offsetX;
- 			this.y = event.offsetY;
- 		},
- 		click :function() {
- 			alert("Kamu klik ini");
+ 		logUmur :function() {
+ 			console.log("kamu input umur kamu");	
  		}
  	}
  })
